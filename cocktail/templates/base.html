@@ -6,13 +6,14 @@
   <link rel="stylesheet" href="{% static 'css/base.css' %}" /> 
   <script class="u-script" type="text/javascript" src="{% static 'js/base.js' %}" defer=""></script>
 
-<center>
+<header>
+	Cocktail Ingredient Finder
 <form action="#" method="POST"> {% csrf_token %}
 	<input type="text" name="name" class="input-form" placeholder="Cocktail Name"
 			required="required" />
 	<button type="submit">Submit</button>
 </form>
-</center>
+</header>
 <br>
 <br>
 
