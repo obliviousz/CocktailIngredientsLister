@@ -1,0 +1,86 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+  <link rel="stylesheet" href="{% static 'css/base.css' %}" /> 
+  <script class="u-script" type="text/javascript" src="{% static 'js/base.js' %}" defer=""></script>
+
+<center>
+<form action="#" method="POST"> {% csrf_token %}
+	<input type="text" name="name" class="input-form" placeholder="Cocktail Name"
+			required="required" />
+	<button type="submit">Submit</button>
+</form>
+</center>
+<br>
+<br>
+
+{% if present %}
+	{% for i in response %}
+	<center>
+	<div class="card">
+  		<img src="{{i.strDrinkThumb}}" alt="Avatar" style="width:100%">
+  		<div class="container">
+    		<h3><b>{{i.strDrink}}</b></h3>
+    		<p><b>Ingredients:</b></p>
+    		{% if i.strIngredient1 %}
+    			<p>{{i.strIngredient1}}</p>
+    		{% endif %}
+    		{% if i.strIngredient2 %}
+    			<p>{{i.strIngredient2}}</p>
+    		{% endif %}
+    		{% if i.strIngredient3 %}
+    			<p>{{i.strIngredient3}}</p>
+    		{% endif %}
+    		{% if i.strIngredient4 %}
+    			<p>{{i.strIngredient4}}</p>
+    		{% endif %}
+    		{% if i.strIngredient5 %}
+    			<p>{{i.strIngredient5}}</p>
+    		{% endif %}
+    		{% if i.strIngredient6 %}
+    			<p>{{i.strIngredient6}}</p>
+    		{% endif %}
+    		{% if i.strIngredient7 %}
+    			<p>{{i.strIngredient7}}</p>
+    		{% endif %}
+    		{% if i.strIngredient8 %}
+    			<p>{{i.strIngredient8}}</p>
+    		{% endif %}
+    		{% if i.strIngredient9 %}
+    			<p>{{i.strIngredient9}}</p>
+    		{% endif %}
+    		{% if i.strIngredient10 %}
+    			<p>{{i.strIngredient10}}</p>
+    		{% endif %}
+    		{% if i.strIngredient11 %}
+    			<p>{{i.strIngredient11}}</p>
+    		{% endif %}
+    		{% if i.strIngredient12 %}
+    			<p>{{i.strIngredient12}}</p>
+    		{% endif %}
+    		{% if i.strIngredient13 %}
+    			<p>{{i.strIngredient13}}</p>
+    		{% endif %}
+    		{% if i.strIngredient14 %}
+    			<p>{{i.strIngredient14}}</p>
+    		{% endif %}
+    		{% if i.strIngredient15 %}
+    			<p>{{i.strIngredient15}}</p>
+    		{% endif %}
+    		{% if i.strIngredient16 %}
+    			<p>{{i.strIngredient16}}</p>
+    		{% endif %}
+  		</div>
+	</div>
+	</center>	
+	<br>
+	<br>
+	<br>
+	{% endfor %}
+
+{% elif searched %}
+	We didnt find the name you are searching
+{% endif %}
+</html>
