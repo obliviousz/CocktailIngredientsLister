@@ -2,21 +2,25 @@
 
 <!DOCTYPE html>
 <html>
-
   <link rel="stylesheet" href="{% static 'css/base.css' %}" /> 
   <script class="u-script" type="text/javascript" src="{% static 'js/base.js' %}" defer=""></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <header>
-	Cocktail Ingredient Finder
-<form action="#" method="POST"> {% csrf_token %}
-	<input type="text" name="name" class="input-form" placeholder="Cocktail Name"
-			required="required" />
-	<button type="submit">Submit</button>
-</form>
+	<a href="/">
+	<img src="{% static 'images/logo.jpeg' %}">
+	</a>
 </header>
+<br>	
+<body>
+<div class="searchbar">
+	<form class="search" action="#" method="POST"> {% csrf_token %}
+		<input type="text" name="name" class="input-form" placeholder="Cocktail Name"
+				required="required" />	
+		<button type="submit"><i class="fa fa-search"></i></button>
+	</form>
+</div>
 <br>
 <br>
-
 {% if present %}
 	{% for i in response %}
 	<center>
@@ -84,4 +88,5 @@
 {% elif searched %}
 	We didnt find the name you are searching
 {% endif %}
+</body>
 </html>

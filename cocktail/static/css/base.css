@@ -5,28 +5,39 @@
   border-radius: 5px;
 }
 
+.searchbar{
+    text-align: center;
+}
+
 header {
+
+  text-align: center;
   background-color: black;
   color: white;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
   padding: 20px;
   font-size: 25px;
   font-weight: bold;
   box-shadow: 0 3px 6px 0 #555;
 }
 
-input {
-  display: flex;
-  flex-direction: row;
-  padding: 10px 10px;
-  border-radius: 6px;
-  margin-left: 20px;
-  width: 50%;
+input[type=text] {
+  width: 150px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
   background-color: white;
+  background-image: url('image/searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 10px 0px 10px 10px;
+  transition: width 0.4s ease-in-out;
 }
+
+input[type=text]:focus {
+  width: 30%;
+}
+
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
